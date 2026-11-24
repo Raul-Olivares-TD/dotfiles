@@ -1,0 +1,43 @@
+-- Todos los plugins se declaran aquí, en una sola llamada.
+vim.pack.add({
+  "https://github.com/folke/snacks.nvim",
+  "https://github.com/nvim-mini/mini.icons",
+  "https://github.com/stevearc/oil.nvim",
+  "https://github.com/lewis6991/gitsigns.nvim",
+  "https://github.com/MagicDuck/grug-far.nvim",
+  "https://github.com/neovim/nvim-lspconfig",
+  "https://github.com/mason-org/mason.nvim",
+  "https://github.com/stevearc/conform.nvim",
+  "https://github.com/folke/which-key.nvim",
+  "https://github.com/akinsho/bufferline.nvim",
+  "https://github.com/stevearc/overseer.nvim",
+  "https://github.com/alsi-lawr/neotheme.nvim",
+  "https://github.com/nvim-lualine/lualine.nvim",
+  "https://github.com/rachartier/tiny-cmdline.nvim",
+  "https://github.com/folke/tokyonight.nvim",
+  "https://github.com/catppuccin/nvim",
+  "https://github.com/mrcjkb/rustaceanvim",
+  "https://github.com/rebelot/kanagawa.nvim",
+  "https://github.com/saghen/blink.lib",
+  "https://github.com/saghen/blink.cmp",
+  "https://github.com/sindrets/diffview.nvim",
+  "https://github.com/github/copilot.vim",
+  "https://github.com/nvim-treesitter/nvim-treesitter",
+  "https://github.com/MeanderingProgrammer/render-markdown.nvim",
+})
+
+require("plugins.picker")
+require("plugins.explorer")
+require("plugins.git")
+require("plugins.search")
+require("plugins.lsp")
+require("plugins.format")
+require("plugins.ui")
+require("plugins.tasks")
+require("plugins.appearance")
+require("plugins.statusline")
+require("plugins.cmdline")
+require("plugins.rust")
+require("plugins.completion")
+require("diffview").setup({})
+require("plugins.markdown")
