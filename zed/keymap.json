@@ -1,0 +1,151 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+
+  // ==========================================
+  // MODO NORMAL Y VISUAL (Navegación y Edición)
+  // ==========================================
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      "space": null,
+
+      // Movimiento rápido con líder
+      "space h": "vim::StartOfLine",
+      "space l": "vim::EndOfLine",
+      "space k": "vim::StartOfDocument",
+      "space j": "vim::EndOfDocument",
+
+      // Seleccionar todo el archivo
+      "space v a": "editor::SelectAll"
+    }
+  },
+
+  // ==========================================
+  // MODO NORMAL (Búsqueda, Git, Ventanas y Archivos)
+  // ==========================================
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // Búsqueda (Snacks equivalents)
+      "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
+      "space f b": "tab_switcher::Toggle",
+
+      // Explorador de archivos (Oil equivalents)
+      "space e": "project_panel::ToggleFocus",
+      "-": "project_panel::ToggleFocus",
+
+      // Git (Gitsigns & Diffview equivalents)
+      "] c": "editor::GoToHunk",
+      "[ c": "editor::GoToPreviousHunk",
+      "space g h": "git::ToggleStaged",
+      "space g r": "git::Restore",
+      "space g p": "editor::ToggleSelectedDiffHunks",
+      "space g b": "git::Blame",
+      "space g d": "git::Diff",
+
+      // Buscar y reemplazar en proyecto (GrugFar equivalents)
+      "space s r": "pane::DeploySearch",
+      "space s w": ["pane::DeploySearch", { "replace_enabled": true }],
+
+      // Formatear archivo (Conform)
+      "space c f": "editor::Format",
+
+      // Pestañas / Buffers (Bufferline)
+      "shift-l": "pane::ActivateNextItem",
+      "shift-h": "pane::ActivatePreviousItem",
+      "space b d": "pane::CloseActiveItem",
+      "space b n": "workspace::NewFile",
+
+      // Terminal y Tareas (Snacks / Overseer)
+      "space t t": "terminal_panel::ToggleFocus",
+      "space t f": "workspace::NewCenterTerminal",
+      "space t o": "task::Spawn",
+
+      // Apariencia (UI)
+      "space u t": "theme_selector::Toggle",
+
+      // Splits de Ventanas
+      "space w v": "pane::SplitRight",
+      "space w h": "pane::SplitDown",
+      "space w q": "pane::CloseActiveItem",
+      "space w o": "workspace::CloseInactiveTabsAndPanes",
+
+      // Moverse entre ventanas
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+
+      // Mover y duplicar líneas
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "alt-shift-j": "editor::DuplicateLineDown",
+
+      // Indentar y comentar
+      "tab": "editor::Indent",
+      "shift-tab": "editor::Outdent",
+      "ctrl-/": "editor::ToggleComments",
+      "ctrl-_": "editor::ToggleComments",
+      // Ramas y Gráfico de Git
+      "space g s": "git::Switch",
+      "space g l": "git_graph::Open",
+    }
+  },
+
+  // ==========================================
+  // MODO VISUAL (Normal, Línea y Bloque)
+  // ==========================================
+  {
+    "context": "Editor && (vim_mode == visual || vim_mode == visual_line || vim_mode == visual_block) && !VimWaiting && !menu",
+    "bindings": {
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "alt-shift-j": "editor::DuplicateLineDown",
+      "tab": "editor::Indent",
+      "shift-tab": "editor::Outdent",
+      "ctrl-/": "editor::ToggleComments",
+      "ctrl-_": "editor::ToggleComments"
+    }
+  },
+
+  // ==========================================
+  // MODO INSERTAR
+  // ==========================================
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "shift-tab": "editor::Outdent"
+    }
+  },
+
+  // ==========================================
+  // TERMINAL
+  // ==========================================
+  {
+    "context": "Terminal",
+    "bindings": {
+      "escape": ["terminal::SendText", "\u001b"],
+      "escape escape": "terminal::ToggleViMode"
+    }
+  }
+
+]

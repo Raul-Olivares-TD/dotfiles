@@ -1,0 +1,118 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "window_title_format": "${projectName}${separator}${fileName}",
+  "title_bar": {
+    "show_branch_name": true,
+    "show_branch_status_icon": true
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "fallback_branch_name": "main",
+    "dock": "left"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "git": {
+    "disable_git": false,
+    "date_format": "locale"
+  },
+  "markdown_preview": {
+    "font_family": "JetBrainsMono Nerd Font Mono"
+  },
+  "ui_font_weight": 400.0,
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "base_keymap": "Zed",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always",
+    "use_smartcase_find": true,
+    "toggle_relative_line_numbers": true,
+  },
+  "which_key": {
+    "enabled": true,
+    "delay_ms": 500
+  },
+  "terminal": {
+    "font_sie": 15.0,
+    "font_family": "JetBrainsMono Nerd Font Mono",
+    "shell": {
+      "program": "pwsh.exe"
+    }
+  },
+  "agent": {
+    "threads_sidebar": {
+      "position": "left"
+    },
+    "dock": "right",
+    "single_file_review": true,
+    "expand_edit_card": true
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    },
+    "Claude Code (Empresa)": {
+      "default_config_options": {
+        "effort": "medium",
+        "mode": "default"
+      },
+      "type": "custom",
+      "command": "C:\\Users\\miniape\\AppData\\Local\\mise\\installs\\node\\24.19.0\\node.exe",
+      "args": [
+        "C:\\Users\\miniape\\AppData\\Local\\Zed\\external_agents\\registry\\npx\\claude-acp\\node_modules\\@agentclientprotocol\\claude-agent-acp\\dist\\index.js"
+      ],
+      "env": {
+        "CLAUDE_CONFIG_DIR": "C:\\Users\\miniape\\.claude_empresa",
+        "CLAUDE_AGENT_LOGS": "C:\\Users\\miniape\\AppData\\Local\\Temp\\acp_logs"
+      }
+    },
+    "Claude Code (Personal)": {
+      "type": "custom",
+      "command": "C:\\Users\\miniape\\AppData\\Local\\mise\\installs\\node\\24.19.0\\node.exe",
+      "args": [
+        "C:\\Users\\miniape\\AppData\\Local\\Zed\\external_agents\\registry\\npx\\claude-acp\\node_modules\\@agentclientprotocol\\claude-agent-acp\\dist\\index.js"
+      ],
+      "env": {
+        "CLAUDE_CONFIG_DIR": "C:\\Users\\miniape\\.claude_personal"
+      }
+    },
+    "Antigravity CLI": {
+      "type": "custom",
+      "command": "antigravity-cli",
+      "args": ["acp"]
+    }
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "ui_font_size": 15.0,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  }
+}
